@@ -1,0 +1,14 @@
+<section class="hero">
+
+  <div class="slider">
+    <div
+      class="slide"
+      *ngFor="let image of images; let i = index"
+      [style.backgroundImage]="'url(' + image + ')'"
+      [style.animationDelay]="(i * 5) + 's'">
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+
+</section>

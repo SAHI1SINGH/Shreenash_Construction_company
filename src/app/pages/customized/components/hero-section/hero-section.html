@@ -1,0 +1,16 @@
+<section class="hero" id="customized-hero">
+
+  <!-- Background Slider -->
+  <div class="slider">
+    <div
+      class="slide"
+      *ngFor="let image of images; let i = index"
+      [style.backgroundImage]="'url(' + image + ')'"
+      [style.animationDelay]="(i * 5) + 's'">
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+</section>

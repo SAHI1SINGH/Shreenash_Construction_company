@@ -1,0 +1,60 @@
+<section class="faq-section"
+  id="faq">
+
+  <!-- HEADER -->
+  <div class="faq-header">
+
+    <h2>
+      {{ title }}
+    </h2>
+
+    <!-- <p>
+      {{ subtitle }}
+    </p> -->
+
+  </div>
+
+  <!-- FAQ LIST -->
+  <div class="faq-container">
+
+    <div
+      class="faq-card"
+      *ngFor="let faq of faqs; let i = index"
+    >
+
+      <!-- QUESTION -->
+      <div
+        class="faq-question"
+        (click)="toggleFaq(i)"
+      >
+
+        <h3>
+          {{ faq.question }}
+        </h3>
+
+        <i
+          class="fa-solid"
+          [ngClass]="faq.open
+          ? 'fa-minus'
+          : 'fa-plus'"
+        ></i>
+
+      </div>
+
+      <!-- ANSWER -->
+      <div
+        class="faq-answer"
+        [class.active]="faq.open"
+      >
+
+        <p>
+          {{ faq.answer }}
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

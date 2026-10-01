@@ -1,0 +1,465 @@
+/* =========================
+   APP OVERLAY SECTION
+========================= */
+
+.app-content-overlay {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: url('/images/home/app/logo.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.left-content {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+  width: 42%;
+  z-index: 5;
+}
+
+/* =========================
+   LOGO WRAPPER
+========================= */
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.overlay-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.logo-text h3 {
+  margin-left: 90px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #1673e6;
+  margin-bottom: 4px;
+}
+
+.logo-text span {
+  font-size: 20px;
+  margin-left: 150px;
+  font-weight: 600;
+  color: #ff7b1c;
+}
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.left-content h1 {
+  font-size: 40px;
+  margin-left: 90px;
+  line-height: 1.1;
+  color: #0047b3;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.left-content h1 span {
+  margin-left: 120px;
+  display: block;
+  color: #ff7b1c;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+  font-size: 22px;
+  line-height: 1.5;
+  color: #1f1f1f;
+  font-weight: 500;
+  margin-bottom: 40px;
+  max-width: 700px;
+}
+
+/* =========================
+   PLAYSTORE BUTTON
+========================= */
+
+.playstore-btn {
+  margin-top: 170px;
+  width: fit-content;
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.playstore-btn:hover {
+  transform: translateY(-3px);
+}
+
+.playstore-btn i {
+  font-size: 32px;
+}
+
+.playstore-btn small {
+  display: block;
+  font-size: 11px;
+}
+
+.playstore-btn strong {
+  font-size: 20px;
+}
+
+/* =========================
+   TOP RIGHT CONTENT
+========================= */
+
+.top-content {
+  position: absolute;
+  top: 35px;
+  right: 60px;
+  width: 46%;
+  z-index: 5;
+}
+
+.top-content h2 {
+  font-size: 35px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 35px;
+  margin-left: 90px;
+}
+
+.top-content h2 span {
+  color: #00d84f;
+}
+
+/* =========================
+   FEATURES ROW
+========================= */
+
+.features-row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  gap: 15px;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.feature-item {
+  flex: 1;
+  text-align: center;
+  color: white;
+}
+
+.feature-item i {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.feature-item p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* =========================
+   BOTTOM STRIP
+========================= */
+
+.bottom-strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 46.5%;
+  background: #0047b3;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  z-index: 5;
+}
+
+.bottom-strip img {
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.bottom-strip h3 {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 4px;
+}
+
+.bottom-strip p {
+  color: white;
+  font-size: 20px;
+}
+
+/* =========================
+   TABLET  (≤ 1024px)
+========================= */
+
+@media (max-width: 1024px) {
+
+  .app-content-overlay {
+    
+    background-image: url('/images/home/app/app2.png');
+    background-size: 40% auto;
+    background-position: right 20px;
+    background-repeat: no-repeat;
+    min-height: 640px;
+  }
+
+  .left-content {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    width: 60%;
+  }
+
+  .overlay-logo { width: 52px; height: 52px; }
+
+  .logo-text h3 { margin-left: 0; font-size: 26px; }
+  .logo-text span { margin-left: 0; font-size: 14px; }
+
+  .left-content h1 {
+    margin-left: 0;
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    white-space: nowrap; 
+  }
+  .left-content h1 span { margin-left: 0; white-space: nowrap; display: inline; }
+
+  .description {
+    font-size: 25px;
+    text-align: justify;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .playstore-btn { padding: 10px 16px; margin-top: 90px;}
+  .playstore-btn strong { font-size: 16px; }
+
+  /* ── FEATURES: pinned bottom-left, under the text only ── */
+  .top-content {
+    position: absolute;
+    bottom: 80px;          /* just above the blue strip */
+    left: 0;
+    width: 100%;            /* ← only left half, phone stays clear on right */
+    top: auto;
+    right: auto;
+    transform: none;
+    
+    background: transparent;
+    border-radius: 0;
+    box-sizing: border-box;
+  }
+
+  .top-content h2 { display: none; }
+
+  .features-row {
+    margin: 0;
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .feature-item {
+    flex: unset;
+    text-align: center;
+    color: white;
+  }
+
+  .feature-item i { font-size: 20px; margin-bottom: 6px; }
+  .feature-item p { font-size: 11px; line-height: 1.4; }
+
+  /* ── BOTTOM STRIP: full width ── */
+  .bottom-strip {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 20px;
+    box-sizing: border-box;
+  }
+
+  .bottom-strip img { width: 50px; height: 50px; }
+  .bottom-strip h3 { font-size: 18px; }
+  .bottom-strip p { font-size: 14px; }
+}
+
+/* =========================
+   MOBILE  (≤ 768px)
+========================= */
+
+@media (max-width: 768px) {
+
+  .app-content-overlay {
+    background-size: 50% auto;
+    background-position: auto 90px;
+    min-height: 580px;
+  }
+
+  .left-content {
+    top: 16px;
+    left: 16px;
+    width: 50%;
+  }
+  .left-content h1 { font-size: 22px; margin-bottom: 10px; }
+  .left-content h1 span { margin-left: 0; white-space: nowrap; display: inline; }
+  .description {
+    display: inline;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .playstore-btn { padding: 8px 12px; gap: 8px; }
+  .playstore-btn i { font-size: 22px; }
+  .playstore-btn small { font-size: 9px; }
+  .playstore-btn strong { font-size: 13px; }
+
+  /* ── FEATURES: left half only ── */
+  .top-content {
+    position: absolute;
+    bottom: 65px;
+    left: 0;
+    width: 100%;            
+    top: auto;
+    right: auto;
+    box-sizing: border-box;
+  }
+
+  .features-row {
+    margin: 0;
+    padding: 10px 12px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .feature-item i { font-size: 16px; margin-bottom: 4px; }
+  .feature-item p { font-size: 10px; }
+
+  .bottom-strip { width: 100%; padding: 12px 16px; }
+  .bottom-strip img { width: 40px; height: 40px; }
+  .bottom-strip h3 { font-size: 14px; }
+  .bottom-strip p { font-size: 12px; }
+}
+
+/* =========================
+   SMALL MOBILE  (≤ 480px)
+========================= */
+
+@media (max-width: 480px) {
+
+  .app-content-overlay {
+    background-size: 50% auto;
+    background-position: 180px 80px;
+    min-height: 560px;
+  }
+
+  .overlay-logo { width: 52px; height: 52px; }
+
+  .logo-text h3 { margin-left: 0; font-size: 20px; }
+  .logo-text span { margin-left: 0; font-size: 14px; }
+
+  /* wider left column so heading fits in 2 lines */
+  .left-content {
+    left: 15px;
+    width: 50%;
+    margin-bottom: 50px;
+  }
+
+  .left-content h1 {
+    font-size: 14px;        
+    line-height: 1.15;
+    margin-bottom: 0px;
+  }
+  .left-content h1 span { margin-left: 0; white-space: nowrap; display: block; }
+
+  /* description: vertically centered relative to the image */
+  .description {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    max-width: 100%;        /* don't overflow left column */
+    min-height: 180px;      /* matches roughly the image height so it centers */
+  }
+
+  .playstore-btn {
+    padding: 10px 16px;
+    margin-top: 60px;          /* remove the large margin-top, centering handles it */
+  }
+
+  /* FEATURES */
+  .top-content {
+    bottom: 65px;
+    left: 0;
+    width: 100%;
+  }
+
+  .features-row {
+    padding: 8px 10px;
+    gap: 6px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .feature-item i { font-size: 14px; }
+  .feature-item p { font-size: 9px; }
+
+  /* STRIP */
+  .bottom-strip { padding: 10px 12px; gap: 10px; }
+  .bottom-strip h3 { font-size: 12px; }
+  .bottom-strip p { font-size: 10px; }
+}
+
+@media (max-width: 480px) {
+
+ .app-content-overlay {
+    background-size: 60% auto;
+    background-position: 190px 90px;
+    min-height: 560px;
+  }
+
+}

@@ -1,0 +1,298 @@
+/* =========================
+   FINANCE SECTION
+========================= */
+
+.finance-section{
+  padding:
+  30px
+  clamp(20px, 6vw, 140px);
+
+  background: linear-gradient(
+  180deg,
+  #f4fff7,
+  #eaf8ef
+);
+
+  overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.finance-header{
+  text-align: center;
+
+  max-width: 1000px;
+
+  margin: 0 auto 40px;
+}
+
+/* BADGE */
+
+.finance-badge{
+  display: inline-block;
+
+  padding: 10px 22px;
+
+  border-radius: 40px;
+
+  background: #e9eefc;
+
+  color: #3467ff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  margin-bottom: 22px;
+}
+
+/* TITLE */
+
+.finance-header h2{
+  font-size: 40px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  color: #111827;
+
+  margin-bottom: 16px;
+}
+
+/* DESCRIPTION */
+
+.finance-header p{
+  font-size: 22px;
+
+  line-height: 1.6;
+
+  color: #64748b;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.finance-grid{
+  display: flex;
+
+  justify-content: center;
+
+  gap: 26px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.finance-card{
+  width: 460px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 32px 28px;
+
+  text-align: center;
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,0.05);
+
+  transition: 0.3s;
+}
+
+.finance-card:hover{
+  transform: translateY(-5px);
+}
+
+/* BORDER COLORS */
+
+.green-card{
+  border: 1px solid rgba(34,197,94,0.25);
+}
+
+.blue-card{
+  border: 1px solid rgba(52,103,255,0.25);
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.loan-badge{
+  display: inline-block;
+
+  padding: 8px 22px;
+
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.green-badge{
+  background: rgba(34,197,94,0.12);
+
+  color: #22c55e;
+}
+
+.blue-badge{
+  background: rgba(52,103,255,0.12);
+
+  color: #3467ff;
+}
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+.finance-card h3{
+  font-size: 30px;
+
+  font-weight: 700;
+
+  color: #111;
+
+  margin-bottom: 24px;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.finance-divider{
+  width: 100%;
+
+  height: 2px;
+
+  margin-bottom: 22px;
+}
+
+.green-divider{
+  background:
+  rgba(34,197,94,0.25);
+}
+
+.blue-divider{
+  background:
+  rgba(52,103,255,0.25);
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.interest-label{
+  display: block;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #64748b;
+
+  margin-bottom: 14px;
+}
+
+/* =========================
+   VALUE
+========================= */
+
+.finance-card h4{
+  font-size: 52px;
+
+  font-weight: 800;
+}
+
+/* COLORS */
+
+.green-text{
+  color: #22c55e;
+}
+
+.blue-text{
+  color: #1677ff;
+}
+
+/* =========================
+   NOTE
+========================= */
+
+.finance-note{
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 18px 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  box-shadow:
+  0 5px 18px rgba(0,0,0,0.05);
+}
+
+.finance-note i{
+  color: #3467ff;
+
+  font-size: 18px;
+}
+
+.finance-note p{
+  font-size: 16px;
+
+  font-weight: 600;
+
+  color: #3467ff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 768px){
+
+  .finance-section{
+    padding:
+    50px
+    20px;
+  }
+
+  .finance-header h2{
+    font-size: 34px;
+  }
+
+  .finance-header p{
+    font-size: 16px;
+  }
+
+  .finance-card{
+    width: 100%;
+  }
+
+  .finance-card h3{
+    font-size: 24px;
+  }
+
+  .finance-card h4{
+    font-size: 40px;
+  }
+
+}

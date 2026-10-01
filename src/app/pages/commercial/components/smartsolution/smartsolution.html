@@ -1,0 +1,324 @@
+<!-- =========================
+     SMART SOLAR SECTION
+========================= -->
+
+<section class="smart-solar-section">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="smart-glow glow-left"></div>
+  <div class="smart-glow glow-right"></div>
+
+  <div class="smart-container">
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <div class="smart-header">
+      
+      <!-- DYNAMIC TITLE -->
+      <h2>
+
+        <!-- COMMERCIAL -->
+        <ng-container *ngIf="activeTab === 'commercial'">
+
+          Smart <span>Solar</span>
+          Solutions For Business
+
+        </ng-container>
+
+        <!-- INDUSTRIAL -->
+        <ng-container *ngIf="activeTab === 'industrial'">
+
+          Industrial <span>Solar</span>
+          Energy Solutions
+
+        </ng-container>
+
+      </h2>
+
+      <!-- DYNAMIC DESCRIPTION -->
+      <p>
+
+        <!-- COMMERCIAL -->
+        <ng-container *ngIf="activeTab === 'commercial'">
+
+          Power your business with cost-effective,
+          reliable, and sustainable solar energy systems
+          designed for commercial establishments.
+
+        </ng-container>
+
+        <!-- INDUSTRIAL -->
+        <ng-container *ngIf="activeTab === 'industrial'">
+
+          Advanced industrial solar systems built
+          for factories, warehouses, manufacturing plants,
+          and heavy energy consumption operations.
+
+        </ng-container>
+
+      </p>
+
+      <!-- =========================
+           TAB SWITCH
+      ========================= -->
+
+      <div class="tab-switch">
+
+        <!-- COMMERCIAL -->
+        <button
+          class="tab-btn"
+          [class.active]="activeTab === 'commercial'"
+          (click)="switchTab('commercial')"
+        >
+
+          <i class="fa-solid fa-building"></i>
+
+          Commercial
+
+        </button>
+
+        <!-- INDUSTRIAL -->
+        <button
+          class="tab-btn"
+          [class.active]="activeTab === 'industrial'"
+          (click)="switchTab('industrial')"
+        >
+
+          <i class="fa-solid fa-industry"></i>
+
+          Industrial
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <div class="smart-content">
+
+      <!-- =========================
+           LEFT IMAGE CARD
+      ========================= -->
+
+      <div class="smart-image-card">
+
+        <!-- COMMERCIAL IMAGE -->
+        <img
+          *ngIf="activeTab === 'commercial'"
+          src="/images/home/stats/stat-logo.png"
+          alt="Commercial Solar"
+        >
+
+        <!-- INDUSTRIAL IMAGE -->
+        <img
+          *ngIf="activeTab === 'industrial'"
+          src="/images/commercial/industry.png"
+          alt="Industrial Solar"
+        >
+
+        <!-- OVERLAY -->
+        <div class="image-overlay">
+
+          <h4>Save Up To</h4>
+
+          <!-- COMMERCIAL -->
+          <ng-container *ngIf="activeTab === 'commercial'">
+
+            <h2>90%</h2>
+
+            <p>On Electricity Bills</p>
+
+            <span>
+              Reduce operational expenses and
+              achieve long-term energy savings
+              for your commercial business.
+            </span>
+
+          </ng-container>
+
+          <!-- INDUSTRIAL -->
+          <ng-container *ngIf="activeTab === 'industrial'">
+
+            <h2>85%</h2>
+
+            <p>Industrial Energy Savings</p>
+
+            <span>
+              Power large-scale industrial operations
+              with high-capacity solar systems and
+              reduce heavy electricity costs.
+            </span>
+
+          </ng-container>
+
+          <!-- BUTTON -->
+          <!-- <a (click)="scrollToContact()">
+
+            Get Free Consultation
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+          </a> -->
+
+        </div>
+
+      </div>
+
+      <!-- =========================
+           RIGHT FEATURES
+      ========================= -->
+
+      <div class="features-column">
+
+        <!-- FEATURE 1 -->
+        <div class="feature-card">
+
+          <div class="feature-icon">
+
+            <i
+              class="fa-solid"
+              [ngClass]="
+                activeTab === 'commercial'
+                ? 'fa-bolt'
+                : 'fa-industry'
+              "
+            ></i>
+
+          </div>
+
+          <div>
+
+            <h4>
+
+              {{
+                activeTab === 'commercial'
+                ? 'Lower Electricity Costs'
+                : 'Heavy Load Power Support'
+              }}
+
+            </h4>
+
+            <p>
+
+              {{
+                activeTab === 'commercial'
+                ? 'Reduce monthly electricity bills with efficient commercial solar solutions.'
+                : 'Designed for factories and industries with high energy demand.'
+              }}
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- FEATURE 2 -->
+        <div class="feature-card">
+
+          <div class="feature-icon">
+
+            <i
+              class="fa-solid"
+              [ngClass]="
+                activeTab === 'commercial'
+                ? 'fa-chart-line'
+                : 'fa-battery-full'
+              "
+            ></i>
+
+          </div>
+
+          <div>
+
+            <h4>
+
+              {{
+                activeTab === 'commercial'
+                ? 'Higher ROI'
+                : 'Reliable Energy Production'
+              }}
+
+            </h4>
+
+            <p>
+
+              {{
+                activeTab === 'commercial'
+                ? 'Fast payback periods and excellent long-term returns.'
+                : 'Ensure uninterrupted industrial operations with stable solar energy.'
+              }}
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- FEATURE 3 -->
+        <div class="feature-card">
+
+          <div class="feature-icon">
+
+            <i
+              class="fa-solid"
+              [ngClass]="
+                activeTab === 'commercial'
+                ? 'fa-leaf'
+                : 'fa-screwdriver-wrench'
+              "
+            ></i>
+
+          </div>
+
+          <div>
+
+            <h4>
+
+              {{
+                activeTab === 'commercial'
+                ? 'Sustainable Business'
+                : 'Low Maintenance Systems'
+              }}
+
+            </h4>
+
+            <p>
+
+              {{
+                activeTab === 'commercial'
+                ? 'Build a greener and more environmentally responsible business.'
+                : 'Durable industrial solar infrastructure built for long-term performance.'
+              }}
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     CONTACT SECTION
+========================= -->
+
+<section
+  class="contact-section"
+  id="contact"
+>
+
+  <!-- YOUR CONTACT SECTION -->
+
+</section>

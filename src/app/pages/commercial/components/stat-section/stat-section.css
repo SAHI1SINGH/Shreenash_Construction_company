@@ -1,0 +1,302 @@
+/* =========================
+   INDUSTRY SECTION
+========================= */
+
+.industry-section {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  padding: 40px clamp(20px, 6vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url('/images/home/stats/stat-logo.png') center/cover no-repeat;
+}
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.industry-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(2px);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.industry-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.industry-content h2 {
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 600;
+  color: white;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+.stat-divider {
+  width: 1px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.industry-content p {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: clamp(15px, 2vw, 22px);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* =========================
+   STATS CONTAINER
+   Desktop: all 3 in one row
+========================= */
+
+.industry-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* =========================
+   STAT CARD
+========================= */
+
+.stat-card {
+  padding: 24px 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 90px;
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.stat-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0; /* prevents overflow */
+}
+
+/* =========================
+   ICON
+========================= */
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7cffb2;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.stat-left span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #7cffb2;
+  text-align: left;
+  line-height: 1.3;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  width: 1px;
+  min-width: 1px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+/* =========================
+   VALUE
+========================= */
+
+.stat-card h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* =========================
+   TABLET  ≤ 1024px
+   2 columns
+========================= */
+
+@media (max-width: 1024px) {
+
+  .industry-section {
+    padding: 80px clamp(20px, 4vw, 60px);
+    min-height: auto;
+  }
+
+  .industry-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .stat-card h3 {
+    font-size: 24px;
+  }
+
+}
+
+/* =========================
+   MOBILE  ≤ 768px
+   1 column — full width
+========================= */
+
+@media (max-width: 768px) {
+
+  .industry-section {
+    padding: 70px clamp(16px, 5vw, 32px);
+  }
+
+  .industry-content p {
+    margin-bottom: 32px;
+  }
+
+  .industry-stats {
+    grid-template-columns: 1fr;  
+    gap: 16px;
+    width: 100%;                 
+  }
+
+  .stat-card:last-child {
+    grid-column: auto;
+    width: 300px;
+    justify-self: center;
+    max-width: 100%;             
+    margin: 0;
+  }
+
+  .stat-card {
+    padding: 20px 22px;
+    width: 300px;
+    justify-self: center;
+    border-radius: 20px;
+    min-height: 80px;                
+    box-sizing: border-box;     
+  }
+
+  .stat-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 18px;
+  }
+
+  .stat-left span {
+    font-size: 15px;
+  }
+
+  .stat-card h3 {
+    font-size: 22px;
+  }
+
+  .divider {
+    height: 36px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE  ≤ 480px
+========================= */
+
+@media (max-width: 480px) {
+
+  .industry-section {
+    padding: 60px 16px;
+  }
+
+  .stat-card {
+    padding: 18px 16px;
+    width: 300px;
+    justify-self: center;
+    gap: 12px;
+    border-radius: 18px;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 16px;
+  }
+
+  .stat-left {
+    gap: 10px;
+  }
+
+  .stat-left span {
+    font-size: 14px;
+  }
+
+  .divider {
+    height: 30px;
+  }
+
+  .stat-card h3 {
+    font-size: 20px;
+  }
+
+}

@@ -1,0 +1,201 @@
+<section
+  class="contact-section"
+  id="contact"
+>
+
+  <!-- HEADER -->
+  <div class="contact-header">
+
+    <h2>Start Your Solar Journey Today</h2>
+
+    <p>
+      Ready to start saving? Contact us today for a free consultation
+      and custom solar quote.
+    </p>
+
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="contact-container">
+
+    <!-- LEFT FORM -->
+    <div class="contact-form-box">
+
+      <!-- Catches Google Forms response silently, no page navigation -->
+      <iframe
+        name="google-form-iframe"
+        style="display:none;"
+        (load)="onIframeLoad(contactForm)">
+      </iframe>
+
+      <form
+      #contactForm
+        [action]="FORM_ACTION"
+        method="POST"
+        target="google-form-iframe"
+      >
+
+        <!-- FULL NAME -->
+        <div class="form-group">
+
+          <label>
+            Full Name <span>*</span>
+          </label>
+
+          <input
+            type="text"
+            placeholder="Enter your full name"
+            [name]="ENTRY_NAME"
+            required
+          >
+
+        </div>
+
+        <!-- PHONE -->
+        <div class="form-group">
+
+          <label>
+            Phone Number <span>*</span>
+          </label>
+
+          <input
+            type="text"
+            placeholder="Enter your phone number"
+            [name]="ENTRY_PHONE"
+            required
+          >
+
+        </div>
+
+        <!-- ADDRESS -->
+        <div class="form-group">
+
+          <label>
+            Address <span>*</span>
+          </label>
+
+          <input
+            type="text"
+            placeholder="Enter your address"
+            [name]="ENTRY_ADDRESS"
+          >
+
+        </div>
+
+        <!-- MESSAGE -->
+        <div class="form-group">
+
+          <label>
+            Write Your Query
+          </label>
+
+          <textarea
+            placeholder="Write your message..."
+            [name]="ENTRY_QUERY"
+          ></textarea>
+
+        </div>
+
+        <!-- SUCCESS MESSAGE -->
+        @if (showSuccess) {
+          <p class="form-status success">
+            ✅ Thank you! We'll call you soon.
+          </p>
+        }
+
+        <!-- BUTTON -->
+        <button class="submit-btn" type="submit">
+          Get Free Call
+        </button>
+
+      </form>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-info">
+
+      <!-- CONTACT CARDS -->
+      <div class="contact-cards">
+
+        <!-- ADDRESS -->
+        <div class="info-card">
+
+          <div class="info-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div class="info-text">
+            <h4>Address</h4>
+            <p>Old Dhamtari Road, Sejbahar, Raipur, 492015</p>
+          </div>
+
+        </div>
+
+        <!-- PHONE -->
+        <div class="info-card">
+
+          <div class="info-icon">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+
+          <div class="info-text">
+            <h4>Phone</h4>
+            <p>+91 9685778971, +91 8896444447</p>
+          </div>
+
+        </div>
+
+        <!-- EMAIL -->
+        <div class="info-card">
+
+          <div class="info-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+
+          <div class="info-text">
+            <h4>Email</h4>
+            <p>info@tadobasolutions.com</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- OFFICE MAP -->
+      <div class="office-map">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1748.9722363611452!2d81.66111373810278!3d21.159444918742896!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28d34164a13fb7%3A0x647bcae8b24fb3d7!2sTadoba%20Solutions%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1779605408568!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+      </div>
+
+      <!-- BUSINESS HOURS -->
+      <div class="business-hours">
+
+        <h3>Business Hours</h3>
+
+        <div class="hours-row">
+          <span>Monday - Saturday:</span>
+          <span>9:30 AM - 6:30 PM</span>
+        </div>
+
+        <div class="hours-row">
+          <span>Sunday:</span>
+          <span>Closed</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,186 @@
+/* =========================
+   PARTNER SECTION
+========================= */
+
+.partner-section {
+  position: relative;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+
+.partner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.partner-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.partner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 5, 30, 0.82) 0%,
+    rgba(20, 10, 50, 0.70) 50%,
+    rgba(10, 5, 30, 0.82) 100%
+  );
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.partner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 50px);
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.partner-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partner-logo img {
+  width: clamp(180px, 28vw, 320px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  width: 1px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.partner-text {
+  text-align: left;
+}
+
+.partner-text h2 {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.partner-text p {
+  font-size: clamp(16px, 2.5vw, 24px);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .partner-content {
+    gap: 30px;
+  }
+
+  .partner-logo img {
+    width: 240px;
+  }
+
+  .partner-text h2 {
+    font-size: 34px;
+  }
+
+  .partner-text p {
+    font-size: 20px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .partner-section {
+    padding: 40px 18px;
+  }
+
+  .partner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 22px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .partner-logo img {
+    width: 220px;
+  }
+
+  .partner-text {
+    text-align: center;
+  }
+
+  .partner-text h2 {
+    font-size: 28px;
+  }
+
+  .partner-text p {
+    font-size: 17px;
+  }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .partner-logo img {
+    width: 180px;
+  }
+
+  .partner-text h2 {
+    font-size: 24px;
+  }
+
+  .partner-text p {
+    font-size: 15px;
+  }
+
+}

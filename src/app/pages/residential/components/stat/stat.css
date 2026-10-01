@@ -1,0 +1,276 @@
+/* =========================
+   RESIDENTIAL STATS SECTION
+========================= */
+
+.residential-stats-section {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  padding: 0 clamp(20px, 6vw, 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url('/images/residential/1.png') center/cover no-repeat;
+}
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.stats-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(2px);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.residential-stats-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.residential-stats-content h2 {
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 600;
+  color: white;
+  margin-bottom: 18px;
+  line-height: 1.3;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.residential-stats-content p {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: clamp(15px, 2vw, 22px);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* =========================
+   STATS GRID
+========================= */
+
+.residential-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* =========================
+   STAT CARD
+========================= */
+
+.residential-stat-card {
+  padding: 18px 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  min-height: 90px;
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.residential-stat-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.residential-stat-card .stat-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7cffb2;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.residential-stat-card .stat-divider {
+  width: 1px;
+  min-width: 1px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+/* =========================
+   STAT TEXT
+========================= */
+
+.residential-stat-card .stat-text {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.residential-stat-card .stat-text h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #7cffb2;
+  margin: 0;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.residential-stat-card .stat-text span {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  white-space: nowrap;
+}
+
+/* =========================
+   TABLET  ≤ 1024px
+========================= */
+
+@media (max-width: 1024px) {
+
+  .residential-stats-section {
+    padding: 0 clamp(20px, 4vw, 60px);
+    min-height: auto;
+  }
+
+  .residential-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .residential-stat-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .residential-stat-card .stat-text span {
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   MOBILE  ≤ 768px
+========================= */
+
+@media (max-width: 768px) {
+
+  .residential-stats-section {
+    padding: 0 clamp(16px, 5vw, 32px);
+  }
+
+  .residential-stats-content p {
+    margin-bottom: 32px;
+  }
+
+  .residential-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .residential-stat-card:last-child {
+    grid-column: auto;
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+  }
+
+  .residential-stat-card {
+    padding: 20px 22px;
+    width: 100%;
+    border-radius: 20px;
+    min-height: 80px;
+    box-sizing: border-box;
+  }
+
+  .residential-stat-card .stat-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 18px;
+  }
+
+  .residential-stat-card .stat-text h3 {
+    font-size: 15px;
+  }
+
+  .residential-stat-card .stat-text span {
+    font-size: 22px;
+  }
+
+  .residential-stat-card .stat-divider {
+    height: 36px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE  ≤ 480px
+========================= */
+
+@media (max-width: 480px) {
+
+  .residential-stats-section {
+    padding: 0 16px;
+  }
+
+  .residential-stat-card {
+    padding: 18px 16px;
+    width: 100%;
+    gap: 14px;
+    border-radius: 18px;
+  }
+
+  .residential-stat-card .stat-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 16px;
+  }
+
+  .residential-stat-card .stat-divider {
+    height: 30px;
+  }
+
+  .residential-stat-card .stat-text h3 {
+    font-size: 14px;
+  }
+
+  .residential-stat-card .stat-text span {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,51 @@
+<section class="testimonial-section" id="testimonials">
+  <div class="testimonial-header">
+    <h2>What Our Customer Say</h2>
+    <p>Join hundreds of satisfied customers who've made the switch to solar.</p>
+  </div>
+
+  <div class="testimonial-wrapper">
+    <button class="arrow-btn" (click)="prevTestimonial()" aria-label="Previous">
+      <i class="fa-solid fa-angle-left"></i>
+    </button>
+
+    <!-- #sliderContainer is required for DOM measurement -->
+    <div class="slider-container" #sliderContainer>
+      <div
+        class="testimonial-track"
+        #track
+        [style.transform]="'translateX(-' + currentTranslate + 'px)'"
+        [style.transition]="transitionEnabled ? 'transform 0.6s ease' : 'none'"
+        (touchstart)="onTouchStart($event)"
+        (touchend)="onTouchEnd($event)"
+      >
+        <div class="testimonial-card" *ngFor="let item of loopTestimonials">
+          <div>
+            <div class="stars">
+              <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+                <i
+                  class="fa-star"
+                  [class.fa-solid]="star <= item.rating"
+                  [class.fa-regular]="star > item.rating"
+                >
+                </i>
+              </ng-container>
+            </div>
+            <p class="review">"{{ item.review }}"</p>
+          </div>
+          <div>
+            <div class="line"></div>
+            <div class="customer-info">
+              <h4>{{ item.name }}</h4>
+              <span>{{ item.location }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="arrow-btn" (click)="nextTestimonial()" aria-label="Next">
+      <i class="fa-solid fa-angle-right"></i>
+    </button>
+  </div>
+</section>

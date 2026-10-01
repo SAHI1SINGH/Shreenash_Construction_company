@@ -1,0 +1,312 @@
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  padding: 30px clamp(20px, 5vw, 120px);
+  background: white;
+  overflow: hidden;
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.contact-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 28px;
+}
+
+.contact-header h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.contact-header p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.contact-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* =========================
+   LEFT FORM
+========================= */
+
+.contact-form-box {
+  flex: 1;
+  background: #edf0ee;
+  border-radius: 22px;
+  padding: 40px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-box form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.form-group label span {
+  color: red;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #cfd5d1;
+  background: transparent;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #09a63d;
+  background: white;
+}
+
+.form-group textarea {
+  min-height: 170px;
+  resize: none;
+  margin-bottom: 0;
+}
+
+/* =========================
+   STATUS MESSAGE
+========================= */
+
+.form-status {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.form-status.success {
+  color: #16a34a;
+}
+
+.form-status.error {
+  color: #dc2626;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.submit-btn {
+  margin-top: auto;
+  width: 100%;
+  border: none;
+  background: #06a63b;
+  color: white;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #048530;
+  transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.contact-info {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================
+   CONTACT CARDS
+========================= */
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================
+   INFO CARD
+========================= */
+
+.info-card {
+  background: #edf3ee;
+  border-radius: 18px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.info-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #dff6e7;
+  color: #08a63c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   INFO TEXT
+========================= */
+
+.info-text h4 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.info-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* =========================
+   OFFICE MAP
+========================= */
+
+.office-map {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.office-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =========================
+   BUSINESS HOURS
+========================= */
+
+.business-hours {
+  background: #06a63b;
+  border-radius: 20px;
+  padding: 22px;
+  color: white;
+}
+
+.business-hours h3 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-header h2 {
+    font-size: 34px;
+  }
+
+  .contact-header p {
+    font-size: 16px;
+  }
+
+  .contact-form-box {
+    padding: 25px;
+  }
+
+  .office-map {
+    height: 280px;
+  }
+
+  .hours-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

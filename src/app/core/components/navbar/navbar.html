@@ -1,0 +1,101 @@
+<header
+  class="navbar"
+>
+  <div class="container nav-container">
+
+    <!-- LOGOS -->
+    <div class="logo-section">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Tadoba Solar Logo" />
+      </div>
+      <div class="second-logo">
+        <img src="/images/ibitf-logo.png" alt="Partner Logo" />
+      </div>
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <nav>
+      <ul class="nav-links">
+        <li>
+          <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li>
+          <a href="https://tadobasolutions.com" target="_blank" rel="noopener noreferrer">Tadoba</a>
+        </li>
+
+        <!-- SOLAR PLANTS DROPDOWN -->
+        <li class="dropdown">
+          <button class="dropdown-toggle">
+            Solar Plants <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a routerLink="/residential" routerLinkActive="active-link">PM Surya Ghar</a>
+            </li>
+            <li>
+              <a routerLink="/commercial" routerLinkActive="active-link">Commercial & Industrial</a>
+            </li>
+            <li>
+              <a routerLink="/commercial" routerLinkActive="active-link">Solar PV + BESS</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a routerLink="/customized" routerLinkActive="active-link">Customized Solutions</a>
+        </li>
+        <li>
+          <a routerLink="/maintenance" routerLinkActive="active-link">Solar Plant O&M</a>
+        </li>
+        
+      </ul>
+    </nav>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- BACKDROP -->
+  <div class="menu-backdrop" [class.open]="isMenuOpen" (click)="closeMenu()"></div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+
+    <!-- CLOSE BUTTON -->
+    <button class="close-btn" (click)="closeMenu()" aria-label="Close menu">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <nav class="mobile-nav">
+      <a href="https://tadobasolutions.com" target="_blank" rel="noopener noreferrer" (click)="closeMenu()">Tadoba</a>
+      <a routerLink="/" routerLinkActive="mobile-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
+        Home
+      </a>
+
+      <!-- MOBILE SOLAR DROPDOWN -->
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-toggle" (click)="toggleSolarDropdown()">
+          Solar Plants
+          <i class="fa-solid fa-chevron-down" [class.rotated]="isSolarDropdownOpen"></i>
+        </button>
+        <div class="mobile-dropdown-items" [class.open]="isSolarDropdownOpen">
+          <a routerLink="/residential" routerLinkActive="mobile-active" (click)="closeMenu()">
+            PM Surya Ghar
+          </a>
+          <a routerLink="/commercial" routerLinkActive="mobile-active" (click)="closeMenu()">
+            Commercial & Industrial
+          </a>
+          <a routerLink="/commercial" routerLinkActive="mobile-active" (click)="closeMenu()">
+            Solar PV + BESS
+          </a>
+        </div>
+      </div>
+      <a routerLink="/customized" routerLinkActive="mobile-active" (click)="closeMenu()">Customized Solutions</a>
+      <a routerLink="/maintenance" routerLinkActive="mobile-active" (click)="closeMenu()">Solar Plant O&M</a>
+      
+    </nav>
+  </div>
+</header>

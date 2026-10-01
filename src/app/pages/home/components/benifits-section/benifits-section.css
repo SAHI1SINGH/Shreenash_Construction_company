@@ -1,0 +1,153 @@
+/* =========================
+   BENEFITS SECTION
+========================= */
+
+.benefits-section{
+  padding:
+  30px
+  clamp(20px, 6vw, 160px);
+
+  background: rgba(154, 149, 144, 0.2);
+
+  backdrop-filter: blur(8px);
+ 
+
+  overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.section-header{
+  text-align: center;
+
+  max-width: 850px;
+
+  margin: 0 auto 80px;
+}
+
+.section-header h2{
+  font-size: 40px;
+  font-weight: 700;
+
+  color: #111;
+
+  margin-bottom: 20px;
+}
+
+.section-header p{
+  font-size: 22px;
+  line-height: 1.7;
+
+  color: #555;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.benefits-grid{
+  display: flex;
+
+  justify-content: center;
+
+  gap: 50px 40px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.benefit-item{
+  width: 410px;
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.icon-box{
+  min-width: 45px;
+
+  height: 45px;
+  
+  background: #08b33e;
+
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  flex-shrink: 0;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.benefit-content{
+}
+.benefit-content h3{
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #111;
+
+  margin-bottom: 10px;
+}
+
+.benefit-content p{
+  font-size: 17px;
+  line-height: 1.3;
+
+
+  color: #555;
+}
+.fa-solid{
+  font-size: 22px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 768px){
+
+  .benefits-section{
+    padding:
+    80px
+    clamp(20px, 5vw, 40px);
+  }
+
+  .section-header h2{
+    font-size: 38px;
+  }
+
+  .section-header p{
+    font-size: 18px;
+  }
+
+  .benefit-item{
+    width: 100%;
+  }
+
+  .benefit-content h3{
+    font-size: 20px;
+  }
+
+}
